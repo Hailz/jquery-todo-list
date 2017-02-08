@@ -33,7 +33,7 @@ function addDoItLaterValue(){
 
   $(".delete").click(function(){
     console.log("delete")
-    $(this).closest ('tr').remove ();
+    $(this).closest('tr').remove();
   });
 
 //Still need:
