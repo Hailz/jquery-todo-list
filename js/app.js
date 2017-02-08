@@ -33,19 +33,12 @@ function addDoItLaterValue(){
 
   $(".delete").click(function(){
     console.log("delete")
-    removeDoItNowValue();
-
-    // $('.delete:parent').text("");
+    $(this).closest ('tr').remove ();
   });
-function removeDoItNowValue(){
-   var doItParent = $(this)
-}
 
+//Still need:
 //function to add table row if all boxess are != empty
-//function to track number of rows in table on each side
-//function to keep left and right row #s the same
 //function to clear individual table cells when button clicked
-
-
+//function to clear input box
 
 });
