@@ -1,0 +1,50 @@
+body{
+  text-align: center;
+  background-color: lightBlue;
+}
+select{
+  border-radius: 5px;
+}
+input{
+   border-radius: 40px;
+}
+button{
+  border-radius: 40px;
+}
+p{
+  display: inline-block;
+  border-bottom: rgba(0,0,0,0.2) solid 2px;
+}
+div{
+  display: inline-block;
+}
+table{
+  border-radius: 5px;
+  box-shadow: 0 0 0 4px black;
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 15px;
+  width: 500px;
+  border-collapse: collapse;
+  background-color: white;
+}
+td{
+  width: 50px;
+  height: 20px;
+}
+.tableHeader{
+  background-color: black;
+  color: white;
+  height: 50px;
+  text-align: right;
+  padding-right: 30px;
+  font-size: 50px;
+}
+.delete{
+  max-width: 10px;
+}
+.deleteButton{
+
+}
+

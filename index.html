@@ -3,9 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Planner</title>
+  <script type="text/javascript" ></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div>
+  <form>
+    <p>Do it now:</p>
+    <input class="doItNowInput" type="text" name="do in now">
+    <p>Do it later:</p>
+    <input class="doItLaterInput" type="text" name="do it later">
+    <button class="submitButton" type="button" name="submit">Submit</button>
+  </form>
+  </div>
+  <br>
+  <div>
+  <table border="1">
+    <tr>
+      <th class="tableHeader" colspan="4">To Do</th>
+    </tr>
+    <tr>
+      <th class="firstList">do it now<td class="delete">done</td></th>
+      <th class="secondList">do it later<td class="delete">done</td></th>
+    </tr>
+    <!-- 12 rows to start -->
+    <tr>
+      <td class="doItNow" id="Now1"><td class="delete"></td></td>
+      <td class="doItLater" id="later1"><td class="delete"></td></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now2"></td><td class="delete"></td>
+      <td class="doItLater" id="later2"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now3"></td><td class="delete"></td>
+      <td class="doItLater" id="later3"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now4"></td><td class="delete"></td>
+      <td class="doItLater" id="later4"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now5"></td><td class="delete"></td>
+      <td class="doItLater" id="later5"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now6"></td><td class="delete"></td>
+      <td class="doItLater" id="later6"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now7"></td><td class="delete"></td>
+      <td class="doItLater" id="later7"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now8"></td><td class="delete"></td>
+      <td class="doItLater" id="later8"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now9"></td><td class="delete"></td>
+      <td class="doItLater" id="later9"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now10"></td><td class="delete"></td>
+      <td class="doItLater" id="later10"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now11"></td><td class="delete"></td>
+      <td class="doItLater" id="later11"></td><td class="delete"></td>
+    </tr>
+    <tr>
+      <td class="doItNow" id="now12"></td><td class="delete"></td>
+      <td class="doItLater" id="later12"></td><td class="delete"></td>
+    </tr>
+    </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
