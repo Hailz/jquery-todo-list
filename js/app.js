@@ -27,14 +27,18 @@ function addDoItLaterValue(){
   console.log(doItLaterValue);
   if (doItLaterValue != ""){
     firstEmptyCell.text(doItLaterValue);
-    $('<button>X</button>').appendTo(secondEmptyCell).addClass('.deleteButton');
+    $('<button>X</button>').appendTo(secondEmptyCell).addClass('deleteButton');
   }
 }
 
   $(".delete").click(function(){
     console.log("delete")
-    $(this).closest('tr').remove();
+    $(this).prev().closest('td').html("");
+    $(this).replaceWith('<td></td>');
+    $(this, 'td').addClass('delete');
   });
+
+
 
 //Still need:
 //function to add table row if all boxess are != empty
