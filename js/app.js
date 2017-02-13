@@ -2,47 +2,58 @@ console.log("Hiya Hailey");
 
 $(document).ready(function(){
 
-
   $('.submitButton').click(function(){
     console.log("click");
     addDoItNowValue();
     addDoItLaterValue();
+    clearInput();
   })
 
-function addDoItNowValue(){
-  var doItNowValue = $(".doItNowInput").val();
-  var firstEmptyCell = $('table td:empty:eq(0)');
-  var secondEmptyCell =$('table td:empty:eq(1)');
-  console.log(doItNowValue);
-  if (doItNowValue != ""){
-    firstEmptyCell.text(doItNowValue);
-    $('<button>X</button>').appendTo(secondEmptyCell).addClass('.deleteButton');
+  function clearInput(){
+    $('.doItLaterInput').val("");
+    $('.doItNowInput').val("");
   }
-}
 
-function addDoItLaterValue(){
-  var doItLaterValue = $(".doItLaterInput").val();
-  var firstEmptyCell = $('table td:empty:eq(0)');
-  var secondEmptyCell =$('table td:empty:eq(1)');
-  console.log(doItLaterValue);
-  if (doItLaterValue != ""){
-    firstEmptyCell.text(doItLaterValue);
-    $('<button>X</button>').appendTo(secondEmptyCell).addClass('deleteButton');
+  function addDoItNowValue(){
+    var doItNowValue = $(".doItNowInput").val();
+    var firstEmptyCell = $('table td:empty:eq(0)');
+    var secondEmptyCell =$('table td:empty:eq(1)');
+    console.log(doItNowValue);
+    if (doItNowValue != ""){
+      firstEmptyCell.text(doItNowValue);
+      $('<button class="deleteButton">X</button>').appendTo(secondEmptyCell);
+      deleteCell();
+    }
   }
-}
 
-  $(".delete").click(function(){
-    console.log("delete")
-    $(this).prev().closest('td').html("");
-    $(this).replaceWith('<td></td>');
-    $(this, 'td').addClass('delete');
-  });
+  function addDoItLaterValue(){
+    var doItLaterValue = $(".doItLaterInput").val();
+    var firstEmptyCell = $('table td:empty:eq(0)');
+    var secondEmptyCell =$('table td:empty:eq(1)');
+    console.log(doItLaterValue);
+    if (doItLaterValue != ""){
+      firstEmptyCell.text(doItLaterValue);
+      $('<button class="deleteButton">X</button>').appendTo(secondEmptyCell);
+      deleteCell();
+    }
+  }
 
+  function deleteCell(){
+    $(".delete").click(function(){
+      console.log("delete")
+      $(this).prev().closest('td').html("");
+      $(this).replaceWith('<td class="delete"></td>');
+    });
+  }
 
+  function addRow(){
+    if ($('table td:empty') == 0){
+
+    }
+  };
 
 //Still need:
 //function to add table row if all boxess are != empty
-//function to clear individual table cells when button clicked
 //function to clear input box
 
 });
